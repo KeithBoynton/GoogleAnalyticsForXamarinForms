@@ -18,12 +18,12 @@ namespace Plugin.GoogleAnalytics
     {
         static GoogleAnalyticsImplementation()
         {
-            StaticConfig = new TrackerConfig(new PlatformInfoProvider());
+            StaticConfig = new TrackerConfig(new PlatformInfoProvider(new DeviceInfo()));
         }
 
         public GoogleAnalyticsImplementation()
         {
-            var platform = new PlatformInfoProvider();
+            var platform = new PlatformInfoProvider(new DeviceInfo());
             Config.AppVersion = platform.Version.ToString();
             TrackerFactory.Config = Config;
         }

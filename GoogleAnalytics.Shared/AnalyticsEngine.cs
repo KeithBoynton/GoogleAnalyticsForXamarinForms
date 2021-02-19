@@ -36,7 +36,7 @@ namespace Plugin.GoogleAnalytics
 
         protected AnalyticsEngine()
         {
-            manager = new TrackerManager(new PlatformInfoProvider());
+            manager = new TrackerManager(new PlatformInfoProvider(new DeviceInfo()));
         }
 
         private bool isAppOptOutSet;

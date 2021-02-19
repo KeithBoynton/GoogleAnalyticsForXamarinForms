@@ -27,7 +27,8 @@ namespace Plugin.GoogleAnalytics
 
             try
             {
-                var bounds = ApplicationView.GetForCurrentView().VisibleBounds;
+                var stateAndSettings = ApplicationView.GetForCurrentView();
+                var bounds = stateAndSettings.VisibleBounds;
                 var scaleFactor = DisplayInformation.GetForCurrentView().RawPixelsPerViewPixel;
                 var size = new Size(bounds.Width * scaleFactor, bounds.Height * scaleFactor);
                 Display = new Dimensions(Convert.ToInt32(size.Height), Convert.ToInt32(size.Width));
@@ -37,7 +38,7 @@ namespace Plugin.GoogleAnalytics
                 //skip
                 if(System.Diagnostics.Debugger.IsAttached)
                 {
-                    throw;
+                    //throw;
                 }
             }
 

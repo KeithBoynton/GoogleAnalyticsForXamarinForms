@@ -53,12 +53,5 @@
     <Reference Include="System.Xml" />
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Plugin.GoogleAnalytics.Abstractions\Plugin.GoogleAnalytics.Abstractions.csproj">
-      <Project>{3642f062-162e-460b-904f-f6dd63e2ede5}</Project>
-      <Name>Plugin.GoogleAnalytics.Abstractions</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="..\..\GoogleAnalytics.Shared\GoogleAnalytics.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
